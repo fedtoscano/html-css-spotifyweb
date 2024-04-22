@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FONT MONSERRAT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <!-- FONT AWESOME CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS STYLESHEET -->
     <link rel="stylesheet" href="spotify/style/style.css">
     <title>Spotify</title>
 </head>
@@ -158,31 +161,50 @@
 
     <footer>
         <div class="song-info">
-            <div class="album-cover"></div>
-            <div class="song-title"></div>
-            <div class="actions"></div>
+            <div class="album-cover">
+                <img src="./spotify/img/sinister.jpeg" alt="">
+            </div>
+            <div class="song-title">
+                <p>Sinister</p>
+                <p>Brano</p>
+                <p>Nome</p></div>
+            <div class="song-actions">
+                <a href=""><i class="fa-light fa-heart"></i></a>
+                <a href=""><i class="fa-light fa-folder"></i></a>
+            </div>
         </div>
         <div class="song-player">
             <nav>
                 <ul class="actions">
-                    <li>Action 1</li>
-                    <li>Action 2</li>
-                    <li>Action 3</li>
-                    <li>Action 4</li>
-                    <li>Action 5</li>
+                    <li><i class="fa-solid fa-shuffle"></i></li>
+                    <li><i class="fa-solid fa-backward-step"></i></li>
+                    <li><i class="fa-solid fa-play"></i></li>
+                    <li><i class="fa-solid fa-forward-step"></i></li>
+                    <li><i class="fa-solid fa-rotate-right"></i></li>
                 </ul>
             </nav>
-            <div class="timebar"></div>
+            <div class="playbar">
+                <span>0:25</span>
+                <div class="playbar-total">
+                    <div class="playbar-listened"></div>
+                </div>
+                <span>4:35</span>
+            </div>
         </div>
         <div class="options">
             <nav>
                 <ul>
-                    <li>option</li>
-                    <li>option</li>
-                    <li>option</li>
-                    <li>option</li>
+                    <li><i class="fa-solid fa-list"></i></li>
+                    <li><i class="fa-solid fa-desktop"></i></li>
+                    <li><i class="fa-solid fa-volume-high"></i></li>
                 </ul>
             </nav>
+            <div class="volume-bar">
+                <div class="volume-total">
+                <div class="volume-selected"></div>
+                </div>
+            </div>
+
         </div>
     </footer>
 </body>

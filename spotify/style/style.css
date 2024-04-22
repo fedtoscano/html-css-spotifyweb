@@ -47,6 +47,7 @@ header{
 }
 header>*{
     width: 30px;
+    height: 100vh;
     margin-bottom: 1em;
 }
 .playlist{
@@ -115,3 +116,87 @@ main{
 
 
 /* FOOTER */
+footer{
+    margin-left: 60px;
+    background-color: rgb(41, 41, 41);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em 1em;
+}
+footer>*{
+    width: 150px;
+}
+.song-info{
+    display: flex;
+}
+.album-cover{
+    width: 20px;
+    margin-right: 1em;
+}
+.album-cover>img{
+    width: 30px;
+}
+.song-title{
+    font-size: .8em;
+}
+.song-title>p{
+    color: rgb(126, 128, 133);
+}
+.song-title>p:first-of-type{
+    color: white;
+    font-weight: bold;
+}
+
+.song-actions{
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    margin-left: .5em;
+}
+
+.actions{
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+.playbar{
+    display: flex;
+    gap: .2em;
+    align-items: center;
+}
+.playbar-total{
+    border: 1px solid magenta;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+}
+.playbar-listened{
+    border: 1px solid green;
+    background-color: red; 
+    width: 20px;
+    height: 5px;
+    border-radius: 5px;
+}
+
+.options{
+    display: flex;
+    gap: .8em;
+    align-items: center;
+}
+.options>nav>ul{
+    display: flex;
+    gap: .5em;
+}
+.volume-total{
+    border: 1px solid magenta;
+    width: 60px;
+    height: 3px;
+    border-radius: 5px;
+}
+.volume-selected{
+    background-color: red;
+    width: 30px;
+    height: 3px;
+    border-radius: 5px;
+}

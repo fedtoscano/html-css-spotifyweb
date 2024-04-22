@@ -36,14 +36,13 @@ body{
 header{
     position: fixed;
     width: 60px;
-    height: 80vh;
+    height: 100vh;
     padding-top: 1em;
     background-color: black;
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 }
 header>*{
     width: 30px;
@@ -59,9 +58,10 @@ header>*{
 
 /* MAIN */
 main{
+    width: calc(100% - 60px);
     margin-left: 60px;
     background-color: rgb(20, 24, 33);
-    overflow-y: auto;
+    overflow: auto;
 }
 
 .banner-upgrade{
@@ -117,18 +117,24 @@ main{
 
 /* FOOTER */
 footer{
+    height: 60px;
+    width: calc(100% - 60px);
     margin-left: 60px;
     background-color: rgb(41, 41, 41);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 2em 1em;
+    position: absolute;
+    bottom: 0;
 }
-footer>*{
-    width: 150px;
+
+footer>div{
+    width: 30px;
 }
 .song-info{
     display: flex;
+    width: 40px;
 }
 .album-cover{
     width: 20px;
@@ -151,30 +157,30 @@ footer>*{
 .song-actions{
     display: flex;
     flex-direction: column;
-    gap: .5em;
-    margin-left: .5em;
+
 }
 
 .actions{
     display: flex;
     justify-content: center;
-    gap: 1em;
+
+}
+
+.song-player{
+    width: 40px;
 }
 .playbar{
     display: flex;
-    gap: .2em;
     align-items: center;
 }
 .playbar-total{
     border: 1px solid magenta;
-    width: 80px;
     height: 5px;
     border-radius: 5px;
 }
 .playbar-listened{
     border: 1px solid green;
     background-color: red; 
-    width: 20px;
     height: 5px;
     border-radius: 5px;
 }

@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-/* GENERAL TAGS */
+/*! GENERAL TAGS */
 ul{
     list-style-type: none;
 }
@@ -32,31 +32,36 @@ body{
     width: 100%;
     flex-wrap: wrap;
 }
-/* HEADER */
+/*! HEADER */
 header{
     position: fixed;
     width: 60px;
-    height: 100vh;
-    padding-top: 1em;
+    height: calc(100% - 60px);
+    padding: 1em;
     background-color: black;
     color: white;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
 }
+
 header>*{
-    width: 30px;
-    height: 100vh;
+    width: 25px;
+    margin-bottom: 1em;
+}
+.header-nav>ul>li>span{
+    display: none;
+}
+.header-nav>ul>li:first-child{
     margin-bottom: 1em;
 }
 .playlist{
+    width: 130px;
     display: none;
 }
-.header-bottom{
-    justify-self: end;
-}
 
-/* MAIN */
+
+/*! MAIN */
 main{
     width: calc(100% - 60px);
     margin-left: 60px;
@@ -70,6 +75,7 @@ main{
     padding: 1em;
     display: flex;
     flex-direction: row-reverse;
+    position: sticky;
 }
 
 .main-nav>ul{
@@ -115,11 +121,10 @@ main{
 }
 
 
-/* FOOTER */
+/*! FOOTER */
 footer{
     height: 60px;
-    width: calc(100% - 60px);
-    margin-left: 60px;
+    width: 100vw;
     background-color: rgb(41, 41, 41);
     display: flex;
     justify-content:space-between;
@@ -136,38 +141,40 @@ footer i{
 .song-player,
 .options{
     display: flex;
-    width: 40px;
+    width: calc((100% / 3) - 20px);
 }
 
-
-
+.song-info{
+    
+}
 .album-cover{
-    width: 50%;
     margin-right: 1em;
 }
 .album-cover>img{
     width: 30px;
 }
 .song-title{
-    width: 50%;
+margin-right: 1em;
 }
 .song-title>p{
-    font-size: 5px;
+    font-size: 70%;
     color: rgb(126, 128, 133);
 }
+
 .song-title>p:first-of-type{
     color: white;
     font-weight: bold;
 }
-
 .song-actions{
     display: flex;
     flex-direction: column;
 }
+
 .song-player{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 .actions{
     display: flex;
@@ -179,38 +186,78 @@ footer i{
     display: flex;
     align-items: center;
     font-size: 8px;
+    width: 100%;
 }
 
 .playbar-total{
     border: 1px solid magenta;
     height: 5px;
-    width: 100px;
+    width: 100%;
     border-radius: 5px;
 }
 
 .playbar-listened{
     border: 1px solid green;
     background-color: red; 
+    width: 80%;
     height: 5px;
     border-radius: 5px;
 }
 
 .options{
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
 .options>nav>ul{
     display: flex;
-    gap: .2em;
+    gap: .5em;
+    margin-right: .3em;
+}
+.volume-bar{
+    width: 100%;
 }
 .volume-total{
     border: 1px solid magenta;
-    width: 40px;
+    width: 80%;
     height: 3px;
     border-radius: 5px;
 }
 .volume-selected{
     background-color: red;
-    width: 20px;
+    width: 20%;
     height: 3px;
     border-radius: 5px;
 }
+
+
+/* ! MEDIA QUERIES */
+
+/* S size - 576px */
+/* TODO: Home, Cerca, La tua libreria. Crea Playlist, nome playlist */
+@media screen and (min-width: 576px){
+    header{
+        width: 150px;
+    }
+    .row{
+        display: flex;
+        justify-content: start;
+        gap: 1em;
+    }
+    .row>article{
+        width: 25%;
+    }
+    main{
+        width: calc(100% - 150px);
+        margin-left: 150px;
+    }
+    .playlist{
+        display: block;
+    }
+}
+
+/* MD size - 576px */
+@media screen and (min-width: 768px){}
+
+/* LG size - 576px */
+@media screen and (min-width: 992px){}

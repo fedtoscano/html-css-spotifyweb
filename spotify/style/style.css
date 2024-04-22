@@ -122,31 +122,37 @@ footer{
     margin-left: 60px;
     background-color: rgb(41, 41, 41);
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
     padding: 2em 1em;
-    position: absolute;
-    bottom: 0;
+    position: fixed;
+    bottom: 0; 
+} 
+footer i{
+    font-size: 10px;
 }
 
-footer>div{
-    width: 30px;
-}
-.song-info{
+.song-info,
+.song-player,
+.options{
     display: flex;
     width: 40px;
 }
+
+
+
 .album-cover{
-    width: 20px;
+    width: 50%;
     margin-right: 1em;
 }
 .album-cover>img{
     width: 30px;
 }
 .song-title{
-    font-size: .8em;
+    width: 50%;
 }
 .song-title>p{
+    font-size: 5px;
     color: rgb(126, 128, 133);
 }
 .song-title>p:first-of-type{
@@ -157,27 +163,31 @@ footer>div{
 .song-actions{
     display: flex;
     flex-direction: column;
-
 }
-
+.song-player{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .actions{
     display: flex;
     justify-content: center;
-
+    gap: 1em;
 }
 
-.song-player{
-    width: 40px;
-}
 .playbar{
     display: flex;
     align-items: center;
+    font-size: 8px;
 }
+
 .playbar-total{
     border: 1px solid magenta;
     height: 5px;
+    width: 100px;
     border-radius: 5px;
 }
+
 .playbar-listened{
     border: 1px solid green;
     background-color: red; 
@@ -186,23 +196,21 @@ footer>div{
 }
 
 .options{
-    display: flex;
-    gap: .8em;
-    align-items: center;
+    flex-direction: column;
 }
 .options>nav>ul{
     display: flex;
-    gap: .5em;
+    gap: .2em;
 }
 .volume-total{
     border: 1px solid magenta;
-    width: 60px;
+    width: 40px;
     height: 3px;
     border-radius: 5px;
 }
 .volume-selected{
     background-color: red;
-    width: 30px;
+    width: 20px;
     height: 3px;
     border-radius: 5px;
 }

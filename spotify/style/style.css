@@ -28,7 +28,7 @@ main{
     font-size: 1.5em;
     color: white;
     font-weight: bold;
-    margin-bottom: .5em;
+    margin-bottom: 1em;
 }
 .section-subtitle{
     font-size: .8em;
@@ -190,7 +190,6 @@ main{
     color: rgb(126, 128, 133);
     text-transform: uppercase;
     font-weight: bold;
-    border-bottom: 1px solid green;
     margin-bottom: 1em;
 }
 .recently-played{
@@ -201,20 +200,32 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
+}
+.article-img{
+    position: relative;
 }
 .article-img>img{
     width: 80%;
 }
+.article-img>i{
+    color: white;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
 .img-info{
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 .img-info>.article-title{
     color: white;
     font-weight: bold;
+    margin-top: .3em;
     margin-bottom: .5em;
+    /* transform: translate(-25%, 0%); */
 }
 .img-info>.article-subtitle{
     color: rgb(126, 128, 133);
@@ -222,6 +233,9 @@ main{
     font-size: .7em;
 }
 
+.popular img{
+    border-radius: 50%;
+}
 
 /*! FOOTER */
 footer{
@@ -266,9 +280,11 @@ footer i{
     color: rgb(126, 128, 133);
     font-size: .8em;
     font-weight: bold;
+    font-size: .6em;
 }
 
 .song-title>p:first-of-type{
+    font-size: .8em;
     color: white;
     font-weight: bold;
 }
@@ -314,13 +330,20 @@ footer i{
     font-weight: bold;
     font-size: 1.5em;
 }
+.fa-circle{
+    position: absolute;
+    top: -7.5px;
+    left: 23%;
+    display: none;
 
+}
 .playbar-total{
     background-color: rgb(126, 128, 133);
     height: 4px;
     width: 100%;
     border-radius: 5px;
     margin: 0 2.5em;
+    position: relative;
 }
 
 .playbar-listened{
@@ -448,4 +471,49 @@ footer i{
     .img-info>.article-subtitle{
         font-size: .6em;
     }
+}
+
+/* !HOVER EFFECTS */
+.article-img:hover i{
+    display: block;
+}
+.article-img:hover img{
+    opacity: 0.7;
+}
+
+.upgrade-btn:hover{
+    font-size: .65em;
+}
+
+.main-nav>ul>li:hover{
+    cursor: pointer;
+    color: white;
+    border-bottom: 1px solid greenyellow;
+}
+
+.header-nav>ul>li>span:hover,
+.create-playlist:hover,
+.playlist-nav>ul>li:hover,
+.install>span:hover,
+.song-actions i:hover{
+    color: white;
+    cursor: pointer;
+}
+.song-title>span:hover{
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.actions .fa-play:hover{
+    font-size: .9em;
+}
+
+.playbar:hover .playbar-listened{
+    background-color: limegreen;
+}
+.playbar:hover .fa-circle{
+    display: block;
+}
+.volume-bar:hover .volume-selected{
+    background-color: limegreen;
 }

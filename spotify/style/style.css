@@ -50,7 +50,7 @@ main{
 /*! HEADER */
 header{
     width: 60px;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 100px);
     padding: 1em;
     background-color: black;
     color: white;

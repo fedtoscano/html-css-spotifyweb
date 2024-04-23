@@ -16,7 +16,7 @@ body{
 }
 .container{
     width: 90%;
-    margin: 0 auto;
+    margin: 1em 2em;
 }
 .flex{
     display: flex;
@@ -25,10 +25,10 @@ main{
     width: 100vh;
 }
 .section-title{
-    font-size: 1.5em;
+    font-size: 2em;
     color: white;
     font-weight: bold;
-    margin-bottom: 1em;
+    margin-bottom: .7em;
 }
 .section-subtitle{
     font-size: .8em;
@@ -68,6 +68,7 @@ header>*{
 .header-nav>ul>li:first-child>img:last-child{
     display: none;
 }
+
 .header-nav>ul>li>span{
     color: rgb(126, 128, 133);
     font-size: .6em;
@@ -82,13 +83,16 @@ header>*{
     width: 130px;
     display: none;
     color: rgb(126, 128, 133);
-    position: relative;
-    bottom: 50px;
+    /* position: relative;
+    bottom:120px; */
+
 }
 
 .playlist-nav>ul>li{
-    margin-bottom: .5em;
-    font-size: .7em;
+    width: max-content;
+    margin-bottom: 1em;
+    font-size: .8em;
+    font-weight: bold;
 
 }
 
@@ -97,6 +101,7 @@ header>*{
 }
 .create-playlist{
     font-size: .9em;
+    font-weight: bold;
 }
 .playlist>p:first-child{
     font-size: .8em;
@@ -105,6 +110,7 @@ header>*{
     text-transform: uppercase;
 }
 .playlist>p:nth-of-type(2)>i{
+    font-size: 1.3em;
     padding: .5em;
     border: none;
     background-color:rgb(126, 128, 133);
@@ -186,7 +192,7 @@ main{
     margin-bottom: 2em;
 }
 .main-nav>ul>li{
-    font-size: .7em;
+    font-size: 1em;
     color: rgb(126, 128, 133);
     text-transform: uppercase;
     font-weight: bold;

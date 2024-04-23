@@ -505,6 +505,12 @@ footer i{
     color: white;
     cursor: pointer;
 }
+
+.header-nav>ul>li:not(:first-child):hover img{
+    padding-left: 5px;
+    border-left: 2px solid greenyellow;
+}
+
 .song-title>span:hover{
     color: white;
     text-decoration: underline;

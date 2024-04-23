@@ -22,12 +22,12 @@ body{
     font-size: 1.5em;
     color: white;
     font-weight: bold;
-    margin-bottom: .8em;
+    margin-bottom: .5em;
 }
 .section-subtitle{
     font-size: .8em;
     color: rgb(126, 128, 133);
-    margin-bottom: 1em;
+    margin-bottom: 1.3em;
 }
 
 .row{
@@ -57,17 +57,22 @@ header{
 header>*{
     width: 25px;
     margin-bottom: 1em;
+    margin-left: .2em;
 }
+
 .header-nav>ul>li:first-child>img:last-child{
     display: none;
 }
 .header-nav>ul>li>span{
-    display: none;
     color: rgb(126, 128, 133);
+    font-size: .6em;
+    margin-left: .5em;
+    display: none;
 }
 .header-nav>ul>li:first-child{
     margin-bottom: 1em;
 }
+
 .playlist{
     width: 130px;
     display: none;
@@ -79,6 +84,7 @@ header>*{
 .playlist-nav>ul>li{
     margin-bottom: .5em;
     font-size: .7em;
+
 }
 
 .playlist p{
@@ -99,6 +105,42 @@ header>*{
     background-color:rgb(126, 128, 133);
     color: black;
     margin-right: .4em;
+    font-weight: bold;
+}
+
+.header-bottom{
+    width: 130px;
+}
+.header-bottom>div{
+    display: flex;
+    align-items: center;
+    width: 100%
+}
+.header-bottom span{
+    font-size: .8em;
+    display: none;
+}
+.header-bottom>hr{
+    margin: .5em 0;
+}
+.install>img{
+    width: 20px;
+    margin-right: 1em;
+}
+.install>span{
+    color: rgb(126, 128, 133);
+    font-weight: bold;
+}
+.header-bottom hr{
+    width: 20%;
+}
+.user>img{
+    width: 25px;
+    margin-right: 1em;
+    background-color: rgb(126, 128, 133);
+    border-radius: 50%;
+}
+.user>span{
     font-weight: bold;
 }
 /*! MAIN */
@@ -126,15 +168,15 @@ main{
     border-radius: 20px;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: .8em;
+    font-size: .6em;
 }
 .main-nav{
-    margin: 1em;
+    margin: 1em 0;
 }
 .main-nav>ul{
     display: flex;
     justify-content: center;
-    gap: 2em;
+    gap: 1.3em;
     flex-wrap: wrap;
     margin-bottom: 2em;
 }
@@ -144,6 +186,7 @@ main{
     text-transform: uppercase;
     font-weight: bold;
     border-bottom: 1px solid green;
+    margin-bottom: 1em;
 }
 .recently-played{
     width: 100%;
@@ -288,7 +331,6 @@ margin-right: 1em;
 /* ! MEDIA QUERIES */
 
 /* S size - 576px */
-/* TODO: Home, Cerca, La tua libreria. Crea Playlist, nome playlist */
 @media screen and (min-width: 576px){
     header{
         width: 200px;
@@ -309,13 +351,18 @@ margin-right: 1em;
         margin-bottom: .5em;
         align-items: center;
     }
-
+    
     .header-nav>ul>li>span{
         display: inline-block;
         color: rgb(126, 128, 133);
         font-size: .8em;
     }
-
+    .header-bottom span{
+        display: inline;
+    }
+    .header-bottom hr{
+        width: 100%;
+    }
     .row{
         display: flex;
         justify-content: space-between;
@@ -335,8 +382,30 @@ margin-right: 1em;
     }
 }
 
-/* MD size - 576px */
-@media screen and (min-width: 768px){}
+/* MD size - 768px */
+@media screen and (min-width: 768px){
+    .row{
+        display: flex;
+        justify-content: start;
+    }
+    .row>article{
+        width: 25%;
+    }
 
-/* LG size - 576px */
-@media screen and (min-width: 992px){}
+}
+
+/* LG size - 992px */
+@media screen and (min-width: 992px){
+    .row{
+        gap: .5em;
+    }
+    .row>article{
+        width: 15%;
+    }
+    .img-info>.article-title{
+        font-size: .8em;
+    }
+    .img-info>.article-subtitle{
+        font-size: .6em;
+    }
+}

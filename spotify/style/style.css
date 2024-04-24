@@ -85,8 +85,8 @@ header>*{
     width: 130px;
     display: none;
     color: rgb(126, 128, 133);
-    /* position: relative;
-    bottom:120px; */
+    margin-top: 2em;
+
 
 }
 
@@ -221,7 +221,7 @@ main{
     display: none;
     position: absolute;
     top: 50%;
-    left: 40%;
+    left: 50%;
     transform: translate(-50%, -50%);
 }
 .img-info{

@@ -23,7 +23,7 @@ body{
 }
 
 .section-title{
-    font-size: 2em;
+    font-size: 1.8em;
     color: white;
     font-weight: bold;
     margin-bottom: .7em;
@@ -49,19 +49,23 @@ body{
 header{
     width: 60px;
     height: calc(100vh - 100px);
-    padding: 1em;
     background-color: black;
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    overflow: auto;
 }
-
+.header-top{
+    margin-top: 1em;
+}
 .header-nav>ul>li>img{
-    width: 25px;
+    width: 40px;
+    padding-left: 1em;
 }
 
+.header-nav>ul>li:first-child{
+    margin-bottom: 1em;
+}
 .header-nav>ul>li:first-child>img:last-child{
     display: none;
 }
@@ -78,7 +82,7 @@ header{
     width: 130px;
     display: none;
     color: rgb(126, 128, 133);
-    margin-top: 1em;
+    margin: 1em;
 }
 
 .playlist-nav>ul>li{
@@ -113,7 +117,9 @@ header{
     font-weight: bold;
 }
 
-
+.header-bottom{
+    margin: 1em;
+}
 .header-bottom>div{
     display: flex;
     align-items: center;
@@ -184,7 +190,7 @@ main{
     margin-bottom: 2em;
 }
 .main-nav>ul>li{
-    font-size: 1em;
+    font-size: .6em;
     color: rgb(126, 128, 133);
     text-transform: uppercase;
     font-weight: bold;
@@ -450,7 +456,7 @@ footer i{
     .row{
         display: flex;
         justify-content: start;
-        gap: 1em;
+        gap: .5em;
     }
     .row>article{
         width: 20%;
@@ -502,10 +508,10 @@ footer i{
     cursor: pointer;
 }
 
-/* .header-nav>ul>li:not(:first-child):hover img{
-    padding-left: 5px;
+.header-nav>ul>li:not(:first-child):hover img{
     border-left: 2px solid greenyellow;
-} */
+    /* border-spacing: 1em; */
+}
 
 
 .song-title>span:hover{

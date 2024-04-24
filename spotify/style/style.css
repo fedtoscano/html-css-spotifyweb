@@ -21,9 +21,7 @@ body{
 .flex{
     display: flex;
 }
-main{
-    width: 100vh;
-}
+
 .section-title{
     font-size: 2em;
     color: white;
@@ -60,40 +58,33 @@ header{
     overflow: auto;
 }
 
-header>*{
+.header-nav>ul>li>img{
     width: 25px;
-    margin-bottom: 1em;
-    margin-left: .2em;
 }
 
 .header-nav>ul>li:first-child>img:last-child{
     display: none;
 }
 
-.header-nav>ul>li>span{
-    color: rgb(126, 128, 133);
-    font-size: .6em;
-    margin-left: .5em;
-    display: none;
+.header-nav ul li span{
+    align-items:center;
     font-weight: bold;
-}
-.header-nav>ul>li:first-child{
-    margin-bottom: 1em;
+    color: rgb(126, 128, 133);
+    margin-left: .5em;
+    display:none;
 }
 
 .playlist{
     width: 130px;
     display: none;
     color: rgb(126, 128, 133);
-    margin-top: 2em;
-
-
+    margin-top: 1em;
 }
 
 .playlist-nav>ul>li{
     width: max-content;
     margin-bottom: 1em;
-    font-size: .8em;
+    font-size: .6em;
     font-weight: bold;
 
 }
@@ -102,11 +93,12 @@ header>*{
     margin-bottom: .5em;
 }
 .create-playlist{
-    font-size: .9em;
+    font-size: .6em;
     font-weight: bold;
 }
+
 .playlist>p:first-child{
-    font-size: .8em;
+    font-size: .7em;
     font-weight: bold;
     color: white;
     text-transform: uppercase;
@@ -121,14 +113,12 @@ header>*{
     font-weight: bold;
 }
 
-.header-bottom{
-    width: 130px;
-}
+
 .header-bottom>div{
     display: flex;
     align-items: center;
-    width: 100%
 }
+
 .header-bottom span{
     font-size: .8em;
     display: none;
@@ -136,20 +126,21 @@ header>*{
 .header-bottom>hr{
     margin: .5em 0;
 }
+
 .install>img{
     width: 20px;
-    margin-right: 1em;
+    /* margin-right: 1em; */
 }
 .install>span{
     color: rgb(126, 128, 133);
     font-weight: bold;
 }
 .header-bottom hr{
-    width: 20%;
+    width: 100%;
 }
 .user>img{
     width: 25px;
-    margin-right: 1em;
+    /* margin-right: 1em; */
     background-color: rgb(126, 128, 133);
     border-radius: 50%;
 }
@@ -158,7 +149,6 @@ header>*{
 }
 /*! MAIN */
 main{
-    width: calc(100% - 60px);
     height: calc(100vh - 60px);
     background-color: rgb(20, 24, 33);
     overflow: auto;
@@ -406,6 +396,7 @@ footer i{
     }
     .header-nav>ul>li:first-child>img:last-child{
         display: block;
+        width: 100px;
     }
 
     .header-nav>ul>li:first-child>img:first-child{
@@ -415,20 +406,26 @@ footer i{
     .header-nav>ul>li{
         display: flex;
         margin-bottom: .5em;
+        align-items:center;
+    }
+    .header-nav>ul>li>img{
         align-items: center;
     }
-    
     .header-nav>ul>li>span{
         display: inline-block;
         color: rgb(126, 128, 133);
-        font-size: .8em;
+        font-size: .6em;
     }
     .header-bottom span{
         display: inline;
     }
-    .header-bottom hr{
-        width: 100%;
+
+    .install>span,
+    .user>span{
+        font-size: .6em;
+        margin-left: .5em;
     }
+
     .row{
         display: flex;
         justify-content: space-between;
@@ -436,10 +433,6 @@ footer i{
 
     .row>article{
         width: 45%;
-    }
-
-    main{
-        width: calc(100% - 200px);
     }
 
     .playlist{
@@ -509,10 +502,10 @@ footer i{
     cursor: pointer;
 }
 
-.header-nav>ul>li:not(:first-child):hover img{
+/* .header-nav>ul>li:not(:first-child):hover img{
     padding-left: 5px;
     border-left: 2px solid greenyellow;
-}
+} */
 
 
 .song-title>span:hover{
